@@ -11,6 +11,9 @@
 	padding: 0 !important;
 }
 
+.logohover:hover {
+	background-color: #4ca797 !important;
+}
 
 /* Reset */
 
