@@ -8,30 +8,23 @@
 </head>
 <body>
   <div class="container-fluid">
-    <h1>Welcome to the Grades Report!</h1>
-    <button type="button" class="btn btn-primary" onclick="main()">Start</button>
+    <h1>Welcome to Switching Images!</h1>
+    <img id="img" src="http://graphics8.nytimes.com/images/misc/nytlogo152x23.gif" onclick="toggleImage()"></img>
   </div>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <script>
-var main = function() {
-  var grades = [];
-  var size = 3;
-  var sum = 0;
-  for(var x = 0; x < size; x++) {
-    grades[x]  = prompt("Enter the grade for student " + (x+1));
-    while(grades[x] > 10 || grades[x] < 1) {
-      alert("Grades must be between 1 and 10");
-      grades[x]  = prompt("Enter the grade for student " + (x+1));
-    }
-    sum = sum + parseFloat(grades[x]);
+var toggleImage = function() {
+  var ny = "http://graphics8.nytimes.com/images/misc/nytlogo152x23.gif";
+  var flag = "http://icons.iconarchive.com/icons/icons-land/vista-flags/128/United-States-Flag-1-icon.png";
+  if(document.getElementById("img").src == flag) {
+    document.getElementById("img").src = ny;
+  }else {
+    document.getElementById("img").src = flag;
   }
-
-  var average = sum/size;
-  alert("The average of the three grades is " + average);
-}
+};
 
 </script>
 </html>
