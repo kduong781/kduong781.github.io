@@ -27,9 +27,11 @@ var main = function() {
       alert("Grades must be between 1 and 10");
       grades[x]  = prompt("Enter the grade for student " + (x+1));
     }
-    sum = sum + grades[x];
+    sum = sum + parseFloat(grades[x]);
   }
-  alert("The average of the three grades is " + (sum/size));
+
+  var average = sum/size;
+  alert("The average of the three grades is " + average);
 }
 
 </script>
